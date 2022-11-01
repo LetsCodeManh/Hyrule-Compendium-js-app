@@ -12,7 +12,7 @@ html {
 }
 
 .background-images::before {
-  background-image: url(../images/Color=Dark\ Blue.png);
+  background-image: url(../images/Background\ Texture\ Dark.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -34,7 +34,6 @@ html {
   content: "";
   display: block;
   position: fixed;
-  z-index: -1;
 }
   
 .container {
@@ -55,6 +54,7 @@ html {
   text-shadow: 0 0 30px #3CD3FC, 0 0 15px #fff;
   position: fixed;
   top: 3.65vh;
+  z-index: 100;
 }
 
 .filter-images {
@@ -69,32 +69,73 @@ html {
   font-size: 1rem;
   font-family: 'Roboto', sans-serif;
   font-style: italic;
+  text-shadow: 0 0 5px #1a6b96d4;
 }
 
-.filter-images-container svg {
+.filter-images-container h2:hover {
+  color: #1CFFFF;
+  text-shadow: 0 0 10px #1CFFFF;
+}
+
+.filter-images-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
 }
 
-#creatures-fill {
-  transition: all 500ms ease-in-out;
-}
-
-#creatures-fill:hover {
-  fill: #3CD3FC;
-}
-
-.change-svg {
-  background-image: url(../images/Creatures-normal.svg);
+.filter-images-container .change-svg {
   background-repeat: no-repeat;
   background-position: center;
-  background-size: contain;
+  background-size: cover;
   width: 50px;
   aspect-ratio: 1 / 1;
   border: none;
   filter: drop-shadow(0 0 5px #1a6b96d4);
+  transition: all 500ms ease-in-out;
+}
+
+.filter-images-container .svg-1 {
+  background-image: url(../images/Creatures-normal.svg);
+}
+
+.filter-images-container .svg-1:hover {
+  background-image: url(../images/Creatures-glow.svg);
+}
+
+.svg-2 {
+  background-image: url(../images/Enemies-normal.svg);
+}
+
+.filter-images-container .svg-2:hover {
+  background-image: url(../images/Enemies-glow.svg);
+}
+
+.svg-3 {
+  background-image: url(../images/Materials-normal.svg);
+}
+
+.filter-images-container .svg-3:hover {
+  background-image: url(../images/Materials-glow.svg);
+}
+
+.svg-4 {
+  background-image: url(../images/Weapons-normal.svg);
+}
+
+.filter-images-container .svg-4:hover {
+  background-image: url(../images/Weapons-glow.svg);
+}
+
+.svg-5 {
+  background-image: url(../images/Treasure-normal.svg);
+}
+
+.filter-images-container .svg-5:hover {
+  background-image: url(../images/Treasure-glow.svg);
 }
 
 .change-svg:hover {
-  fill: #3CD3FC;
   filter: drop-shadow(0 0 5px #1CFFFF);
 }
