@@ -1,0 +1,27 @@
+<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Variation=Weapons, Active=true" clip-path="url(#clip0_3_350)">
+<g id="Vector" filter="url(#filter0_ddf_3_350)">
+<path d="M44.6126 17.214L22.6976 37.738L18.381 33.3878L28.9511 22.7354L29.7259 20.393L27.4015 21.1738L16.8314 31.8262L12.5148 27.476L32.8803 5.3904L45 5L44.6126 17.214ZM23.1403 41.642L8.30888 26.6952C7.53411 25.9144 6.3166 25.9144 5.54183 26.6952L4.43501 27.8106C3.66023 28.5914 3.66023 29.8184 4.43501 30.5992L9.69241 35.8975L2.66409 42.9805C1.77864 43.8729 1.77864 45.3787 2.66409 46.2711L3.71557 47.3307C4.60103 48.2231 6.09524 48.2231 6.9807 47.3307L13.9537 40.3035L19.2111 45.6018C19.9858 46.3826 21.2033 46.3826 21.9781 45.6018L23.0849 44.4864C23.9151 43.6498 23.9151 42.4228 23.1403 41.642Z" fill="#1CFFFF"/>
+</g>
+</g>
+<defs>
+<filter id="filter0_ddf_3_350" x="-9" y="-5" width="65" height="65" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="5"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.308377 0 0 0 0 0.751016 0 0 0 0 1 0 0 0 1 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_3_350"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="1"/>
+<feGaussianBlur stdDeviation="5.5"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.0385764 0 0 0 0 0.552554 0 0 0 0 0.841667 0 0 0 1 0"/>
+<feBlend mode="hard-light" in2="effect1_dropShadow_3_350" result="effect2_dropShadow_3_350"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_3_350" result="shape"/>
+<feGaussianBlur stdDeviation="0.5" result="effect3_foregroundBlur_3_350"/>
+</filter>
+<clipPath id="clip0_3_350">
+<rect width="50" height="50" fill="white"/>
+</clipPath>
+</defs>
+</svg>

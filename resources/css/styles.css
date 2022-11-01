@@ -51,8 +51,50 @@ html {
   z-index: 1;
   color: #3CD3FC;
   font-family: 'Roboto', sans-serif;
-  font-size: 1.875rem;
-  text-shadow: 0 0 30px #3CD3FC;
+  font-size: clamp(1.25rem, 3vh, 1.875rem) ;
+  text-shadow: 0 0 30px #3CD3FC, 0 0 15px #fff;
   position: fixed;
-  top: 35px;
+  top: 3.65vh;
+}
+
+.filter-images {
+  display: flex;
+  justify-content: space-between;
+  color: #1A6B96;
+  gap: 2rem;
+  padding-top: 10rem;
+}
+
+.filter-images-container h2 {
+  font-size: 1rem;
+  font-family: 'Roboto', sans-serif;
+  font-style: italic;
+}
+
+.filter-images-container svg {
+  cursor: pointer;
+}
+
+#creatures-fill {
+  transition: all 500ms ease-in-out;
+}
+
+#creatures-fill:hover {
+  fill: #3CD3FC;
+}
+
+.change-svg {
+  background-image: url(../images/Creatures-normal.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 50px;
+  aspect-ratio: 1 / 1;
+  border: none;
+  filter: drop-shadow(0 0 5px #1a6b96d4);
+}
+
+.change-svg:hover {
+  fill: #3CD3FC;
+  filter: drop-shadow(0 0 5px #1CFFFF);
 }
