@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700&display=swap');
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+%background-image {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100%;
+  width: 100vw;
+}
+
+html {
+  font-size: 14px;
+  font-family: 'Roboto', sans-serif;
+}
+
+header {
+  @extend %background-image;
+  background-image: url(/public/images/background/Sheikah\ -\ Frame\ Art.png);
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  pointer-events: none;
+
+  h1 {
+    color: #20BDFF;
+    font-size: clamp(1.25rem, 3vh, 1.875rem);
+    font-weight: 400;
+    text-shadow: 0 0 10px #20BDFF, 0 0 30px #20BDFF;
+    position: fixed;
+    top: 3.65vh;
+  }
+}
+
+main {
+  min-height: 200vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // cursor: pointer;
+}
