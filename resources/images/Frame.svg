@@ -1,0 +1,25 @@
+<svg width="178" height="178" viewBox="0 0 178 178" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Frame" clip-path="url(#clip0_3_124)">
+<g id="Text Ornament Corner">
+<path id="Vector" d="M2 35H0V18.9875L18.9875 0H35V2H20L2 20V35ZM14.7 0L0 14.7V0H14.7ZM6.3875 6.3875V0.875L0.875 6.3875H6.3875Z" fill="#81959C"/>
+</g>
+<g id="Text Ornament Corner_2">
+<path id="Vector_2" d="M143 2.00003L143 5.16573e-05L159.013 5.24572e-05L178 18.9875L178 35L176 35L176 20.0001L158 2.00003L143 2.00003ZM178 14.7L163.3 5.26714e-05L178 5.34058e-05L178 14.7ZM171.613 6.38755L177.125 6.38755L171.613 0.875052L171.613 6.38755Z" fill="#81959C"/>
+</g>
+<g id="Text Ornament Corner_3">
+<path id="Vector_3" d="M35 176L35 178L18.9875 178L2.19396e-05 159.013L2.11397e-05 143L2.00002 143L2.00002 158L20 176L35 176ZM2.21538e-05 163.3L14.7 178L2.28882e-05 178L2.21538e-05 163.3ZM6.38752 171.613L0.875022 171.613L6.38752 177.125L6.38752 171.613Z" fill="#81959C"/>
+</g>
+<g id="Text Ornament Corner_4">
+<path id="Vector_4" d="M176 143L178 143L178 159.012L159.012 178L143 178L143 176L158 176L176 158L176 143ZM163.3 178L178 163.3L178 178L163.3 178ZM171.612 171.612L171.612 177.125L177.125 171.612L171.612 171.612Z" fill="#81959C"/>
+</g>
+<path id="Left" opacity="0.9" fill-rule="evenodd" clip-rule="evenodd" d="M2 35L2.00003 143L0 143L-3.40432e-05 35L2 35Z" fill="#81959C"/>
+<path id="Right" opacity="0.9" fill-rule="evenodd" clip-rule="evenodd" d="M178 35L178 143L176 143L176 35L178 35Z" fill="#81959C"/>
+<rect id="Top" opacity="0.9" x="35" width="108" height="2" fill="#81959C"/>
+<rect id="Bottom" opacity="0.9" x="35" y="176" width="108" height="2" fill="#81959C"/>
+</g>
+<defs>
+<clipPath id="clip0_3_124">
+<rect width="178" height="178" fill="white"/>
+</clipPath>
+</defs>
+</svg>

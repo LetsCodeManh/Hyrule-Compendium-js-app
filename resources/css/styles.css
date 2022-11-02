@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700&display=swap');
 
 *,
-*::before *::after {
+*::before, 
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -46,17 +47,16 @@ html {
   justify-content: center;
   align-items: center;
   gap: 2rem;
+  padding-bottom: 1.5rem;
 }
 
 .app-header {
-  z-index: 1;
   color: #3CD3FC;
   font-family: 'Roboto', sans-serif;
   font-size: clamp(1.25rem, 3vh, 1.875rem) ;
   text-shadow: 0 0 30px #3CD3FC, 0 0 15px #fff;
   position: fixed;
   top: 3.65vh;
-  z-index: 100;
 }
 
 .filter-images {
@@ -72,6 +72,7 @@ html {
   font-family: 'Roboto', sans-serif;
   font-style: italic;
   text-shadow: 0 0 5px #1a6b96d4;
+  color: #1A6B96;
 }
 
 .filter-images-container h2:hover {
@@ -84,6 +85,7 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 1rem;
   cursor: pointer;
 }
 
@@ -148,6 +150,7 @@ html {
   border-bottom: 2px solid #1A6B96;
   transition: all 500ms ease-in-out;
   color: #1CFFFF;
+  z-index: 1;
   font-family: 'Roboto', sans-serif';
 }
 
@@ -163,4 +166,207 @@ html {
 
 .search-bar:focus::placeholder {
   color: #1CFFFF;
+}
+
+.the-main-stuff {
+  color: #1A6B96;
+  /* display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(125px, 1fr)); */
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: minmax(125px, 1fr);
+  gap: 1rem;
+  padding-inline: 6rem;
+  min-width: 80%;
+  justify-content: center;
+  align-items: center;
+}
+
+.something {
+  position: relative;
+  display: flex;
+  
+}
+
+.img-something {
+  display: inline-block;
+  height: 125px;
+  aspect-ratio: 1 / 1 ;
+  padding: 7.5px;
+  border-image-slice: 30 30 30 30;
+  border-image-width: 20px 20px 20px 20px;
+  border-image-outset: 0 0 0 0;
+  border-image-repeat: stretch;
+  border-image-source: url(/resources/images/Frame.png);
+  border-style: solid;
+  transition: all 500ms ease-in-out;
+  cursor: pointer;
+}
+
+.something-container:hover {
+  color: #1CFFFF;
+}
+
+.img-something:hover {
+  border-image-slice: 40 40 40 40;
+  border-image-outset: 10px 10px 10px 10px;
+  border-image-source: url(/resources/images/Sheikah\ -\ Compendium\ Entry.png);
+}
+
+.something p {
+  position: absolute;
+  bottom: 10%;
+  left: 10%;
+  font-size: 1.25rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+.something-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.125rem;
+  text-shadow: 0 0 5px #1a6b96d4;
+  transition: all 500ms ease-in-out;
+}
+
+.something-2 p {
+  position: absolute;
+  bottom: 10%;
+  left: 10%;
+  font-size: 1.25rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+.something-2 {
+  position: relative;
+  display: flex;
+  padding: 2px;
+  background-image: url(../images/Frame.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: all 500ms ease-in-out;
+  border: 3px solid transparent;
+}
+
+.something-2:hover {
+  border-image-slice: 40 40 40 40;
+  border-image-outset: 5px 5px 5px 5px;
+  border-image-width: 20px 20px 20px 20px;
+  border-style: solid;
+  border-image-source: url(/resources/images/Sheikah\ -\ Compendium\ Entry.png);
+  background-image: none;
+}
+
+.img-something-2 {
+  display: inline-block;
+  height: 125px;
+  aspect-ratio: 1 / 1 ;
+  padding: 7.5px;
+}
+
+
+.modal-container {
+  color: #1CFFFF;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  min-height: 100vh;
+  background-color: #1A6B96;
+}
+
+.header-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: .75rem;
+  width: 400px;
+}
+
+.text-container {
+  font-style: italic;
+
+  text-shadow: 0 0 10px #1CFFFF;
+}
+
+.left{
+  background-image: url(../images/Left-deco.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 12px;
+  width: 120px;
+}
+
+.right {
+  background-image: url(../images/Right-deco.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 12px;
+  width: 120px;
+}
+
+
+
+.header-container h3 {
+  font-size: 2rem;
+  font-style: italic;
+  font-weight: 500;
+  text-shadow: 0 0 10px #1CFFFF;
+}
+
+.padding-2 {
+  gap: 2rem;
+}
+
+.picture-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
+}
+
+.data-header {
+  display: flex;
+  gap: 1rem;
+  font-size: 2rem;
+  font-family: 'Roboto', sans-serif;
+  font-style: italic;
+  text-shadow: 0 0 10px #1CFFFF;
+}
+
+.image-some {
+  height: 350px;
+  aspect-ratio: 1 / 1;
+  padding: .5rem;
+  border-image-slice: 40 40 40 40;
+  border-image-outset: 5px 5px 5px 5px;
+  border-image-width: 20px 20px 20px 20px;
+  border-style: solid;
+  border-image-source: url(/resources/images/Sheikah\ -\ Compendium\ Entry.png);
+}
+
+.categories {
+  font-size: 1.25rem;
+  font-style: italic;
+  font-family: 'Roboto', sans-serif;
+  text-shadow: 0 0 10px #1CFFFF;
 }
