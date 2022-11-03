@@ -126,18 +126,21 @@ main .categories-container .categories svg path {
   transition: filter 500ms ease-in-out;
   transition: filter 500ms ease-in-out, -webkit-filter 500ms ease-in-out;
 }
-main .categories-container .categories:hover {
+main .categories-container .categories:hover, main .categories-container .categories:focus {
   text-shadow: 0px 1px 11px #0a8dd7, 0px 0px 10px #4fc0ff;
   color: #1cffff;
 }
-main .categories-container .categories:hover svg {
+main .categories-container .categories:hover svg, main .categories-container .categories:focus svg {
   fill: #1cffff;
 }
-main .categories-container .categories:hover svg path {
+main .categories-container .categories:hover svg path, main .categories-container .categories:focus svg path {
   -webkit-filter: drop-shadow(0px 1px 11px #0a8dd7, 0px 0px 10px #4fc0ff);
           filter: drop-shadow(0px 1px 11px #0a8dd7, 0px 0px 10px #4fc0ff);
 }
 
+.object-list-container {
+  position: relative;
+}
 .object-list-container .list-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -169,13 +172,15 @@ main .categories-container .categories:hover svg path {
       -ms-flex-align: center;
           align-items: center;
   gap: 0.5rem;
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+  cursor: pointer;
 }
 .object-list-container .list-container .list-item .img-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   position: relative;
-  height: 125px;
 }
 .object-list-container .list-container .list-item .img-container .default-loading-images, .object-list-container .list-container .list-item .img-container .object-border {
   display: inline-block;
@@ -196,9 +201,21 @@ main .categories-container .categories:hover svg path {
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  background-image: url(/public/images/list-background/object-border.png);
+  height: 135px;
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
 }
 .object-list-container .list-container .list-item .object-name {
   font-size: 1.25rem;
+}
+.object-list-container .list-container .list-item:hover, .object-list-container .list-container .list-item:focus {
+  color: #1cffff;
+  text-shadow: 0px 1px 11px #0a8dd7, 0px 0px 10px #4fc0ff;
+}
+.object-list-container .list-container .list-item:hover .object-border, .object-list-container .list-container .list-item:focus .object-border {
+  background-image: url(/public/images/list-background/object-border-hover.png);
+  height: 160px;
 }
 
 .container {
