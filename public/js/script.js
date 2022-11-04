@@ -1,85 +1,51 @@
 let hyruleRepository = (function () {
   let hyruleCompendium = [];
-  let apiUrl = "https://botw-compendium.herokuapp.com/api/v2";
   let categories = [];
 
-  // Fetch entry array
+  // Return The Fetched API Collection Array
   function getAll() {
     return hyruleCompendium;
   }
 
-  // Add entry to array
-  function add(item) {
-    if (typeof item !== "object") {
-      console.log("Should be an object");
-    } else if (
-      !("name" in item) ||
-      !("image" in item) ||
-      !("id" in item) ||
-      !("description" in item) ||
-      !("category" in item)
+  // Add API Objects to hyruleCompendium
+  function add(object) {
+    // Checking if get a object
+    if (
+      typeof object === "object" &&
+      "name" in object &&
+      "id" in object &&
+      "category" in object &&
+      "description" in object &&
+      "image" in object
     ) {
-      console.log("Invalid keys");
+      hyruleCompendium.push(object);
     } else {
-      hyruleCompendium.push(item);
+      return "This is not an object, please add an object in the list!";
     }
   }
 
-  // Create Elements for displaying the compendium
-  function addListItem(entry) {
-    let compendiumList = $(".list-container");
-    let listItem = $.add(li).append(compendiumList);
-    listItem.addClass(".list-item");
-    listItem.id = entry.id;
-
-    // Create a img container that holds the images and id of the entry
-    let imgContainer = $.create("div").append(listItem);
-    imgContainer.addClass(".img-container");
-    // Images
-    let entryImages = $.create("img").append(imgContainer);
-    entryImages.addClass(".default-loading-images");
-    entryImages.attr("src", entry.image);
-    // ID
-    let entryId = $.create("p").append(imgContainer);
-    entryId.addClass(".number");
-    entryId.innerHTML = entry.id;
-    // borderImages
-    let borderImages = $.create("div").append(imgContainer);
-    borderImages.addClass(".object-border");
-    // Name
-    let entryName = $.create("p").append(listItem);
-    entryName.addClass(".object-name");
-    entryName.innerHTML = entry.name;
-
-    clickEvent(listItem, entry);
-
-    // Adding Content in modal container
-    $(".modal-content-header").innerHTML = entry.id + " " + entry.name;
-    $(".modal-content-category").innerHTML = entry.category;
-    $(".modal-content-images").innerHTML = entry.image;
-    $(".modal-content-description").innerHTML = entry.description;
-    $(".modal-content-location").attr("src", entry.image);
-  }
-
-  // Fetching data from API, add each specified entry to hyruleCompendium with add()
+  // Fetching data from API and add to hyruleCompendium with add()
   function loadList() {
-    return fetch(apiUrl)
+    return fetch("https://botw-compendium.herokuapp.com/api/v2")
       .then(function (response) {
         return response.json();
       })
       .then(function (obj) {
-        const fetched = obj.data;
-        categories.push(...Object.keys(fetched));
-        const categoriesList = [
+        let newObject = obj.data;
+        categories.push(...Object.keys(newObject));
+        let categoriesList = [
           ...categories.map((category) => {
             if (category === "creatures") {
-              return [...fetched[category].food, ...fetched[category].non_food];
+              return [
+                ...newObject[category].food,
+                ...newObject[category].non_food,
+              ];
             } else {
-              return fetched[category];
+              return newObject[category];
             }
           }),
         ];
-        const categoriesObject = categoriesList.flat();
+        let categoriesObject = categoriesList.flat();
         categoriesObject.sort((a, b) => a.id - b.id);
         categoriesObject.forEach((category) => {
           add(category);
@@ -90,31 +56,73 @@ let hyruleRepository = (function () {
       });
   }
 
-  $(".list-item").click(function () {
-    // var buttonId = $(this).attr("id");
-    // $(".modal-container").removeAttr("class").addClass(buttonId);
-    $(".modal-container").addClass("is-active");
-    $(".modal-container").removeClass("out");
-  });
+  // Adding is-active to modal container
+  // function showDetails(entry) {
 
-  $(".modal-background").click(function () {
-    $(this).addClass("out");
-    $(".modal-container").removeClass("is-active");
-  });
+  // }
+
+  // Create elements to display the objects
+  function addListItem(entry) {
+    let compendiumList = document.querySelector(".list-container");
+
+    // Create a new list item
+    let listItem = document.createElement("li");
+    listItem.classList.add("list-item");
+    listItem.setAttribute("id", entry.id);
+    compendiumList.appendChild(listItem);
+
+    // Create an image container for the list item
+    let imageContainer = document.createElement("div");
+    imageContainer.classList.add("img-container");
+    listItem.appendChild(imageContainer);
+
+    // Create content for the image container like images, id, and border styling
+    let imagesApi = document.createElement("img");
+    imagesApi.classList.add("default-loading-images");
+    imagesApi.setAttribute("src", entry.image);
+    imageContainer.appendChild(imagesApi);
+
+    let idApi = document.createElement("p");
+    idApi.classList.add("number");
+    idApi.innerText = entry.id;
+    imageContainer.appendChild(idApi);
+
+    let borderStyle = document.createElement("div");
+    borderStyle.classList.add("object-border");
+    imageContainer.appendChild(borderStyle);
+
+    // Create a paragraph for the name of the object
+    const entryName = entry.name;
+
+    //split the above string into an array of strings
+    //whenever a blank space is encountered
+    const arr = entryName.split(" ");
+
+    //loop through each element of the array and capitalize the first letter.
+    for (var i = 0; i < arr.length; i++) {
+      arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
+    }
+
+    //Join all the elements of the array back into a string
+    //using a blankspace as a separator
+    const entryNameCapitalized = arr.join(" ");
+
+    let nameApi = document.createElement("p");
+    nameApi.classList.add("object-name");
+    nameApi.innerText = entryNameCapitalized;
+    listItem.appendChild(nameApi);
+  }
 
   return {
     getAll: getAll,
     add: add,
-    addListItem: addListItem,
     loadList: loadList,
-    // showDetails: showDetails,
-    // categories: categories,
-    // categoryFilter: categoryFilter,
-    // loadCategories: loadCategories,
+    addListItem: addListItem,
   };
 })();
 
 hyruleRepository.loadList().then(function () {
+  // addListItem on load for each entry object
   hyruleRepository.getAll().forEach(function (entry) {
     hyruleRepository.addListItem(entry);
   });
