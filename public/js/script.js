@@ -33,6 +33,8 @@ let hyruleRepository = (function () {
       .then(function (obj) {
         let newObject = obj.data;
         categories.push(...Object.keys(newObject));
+
+        // Because we have an array of food and non_food categories
         let categoriesList = [
           ...categories.map((category) => {
             if (category === "creatures") {
@@ -46,6 +48,7 @@ let hyruleRepository = (function () {
           }),
         ];
         let categoriesObject = categoriesList.flat();
+        // Sort by id
         categoriesObject.sort((a, b) => a.id - b.id);
         categoriesObject.forEach((category) => {
           add(category);
@@ -82,9 +85,12 @@ let hyruleRepository = (function () {
     imagesApi.setAttribute("src", entry.image);
     imageContainer.appendChild(imagesApi);
 
+    function idCount(number) {
+      return (number < 10 ? "00" : number < 100 ? "0" : "") + number;
+    }
     let idApi = document.createElement("p");
     idApi.classList.add("number");
-    idApi.innerText = entry.id;
+    idApi.innerText = idCount(entry.id);
     imageContainer.appendChild(idApi);
 
     let borderStyle = document.createElement("div");
