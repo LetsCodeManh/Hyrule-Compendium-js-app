@@ -16,10 +16,12 @@
 
 $color-primary: #1a6b96;
 $color-secondary: #1cffff;
+$color-tertiary: #3CD3FC;
 $color-special: #20bdff;
 
 html {
   font-size: 14px;
+  line-height: 1.7;
   font-family: "Roboto", sans-serif;
   color: $color-primary;
   font-style: italic;
@@ -43,7 +45,7 @@ header {
     font-weight: 400;
     text-shadow: 0 0 10px $color-special, 0 0 30px $color-special;
     position: fixed;
-    top: 3.65vh;
+    top: 3vh;
   }
 }
 
@@ -128,7 +130,7 @@ main {
   }
 }
 
-@import "list";
+@import "list", "modal";
 
 .container {
   height: 100vh;
