@@ -142,6 +142,7 @@ let hyruleRepository = (function () {
     //Join all the elements of the array back into a string
     //using a blankspace as a separator
     const entryNameCapitalized = arr.join(" ");
+    // Adding the API ID + Name in modalContentHeader
     let modalContentHeader = document.querySelector(".modal-content-header");
     modalContentHeader.innerText = idCount(entry.id) + " " + entryNameCapitalized;
 
@@ -150,15 +151,18 @@ let hyruleRepository = (function () {
     );
     modalContentCategory.innerText = entry.category;
 
+    // Adding the API image in modalContentImage
     let modalContentImage = document.querySelector(".modal-content-image");
     modalContentImage.setAttribute("src", entry.image);
     modalContentImage.setAttribute("alt", "An image of " + entry.name);
 
+    // Adding the API description in modalContentDescription
     let modalContentDescription = document.querySelector(
       ".modal-content-description"
     );
     modalContentDescription.innerText = entry.description;
 
+    // Adding the API location in modalContentLocation
     let modalContentLocation = document.querySelector(
       ".modal-content-location"
     );
@@ -171,6 +175,7 @@ let hyruleRepository = (function () {
     modalContentLocation.innerText = locations;
   }
 
+  // Hid Modal Details
   function hideDetails() {
     let modalContainer = document.querySelector(".modal-container");
     modalContainer.classList.remove("is-active");
@@ -193,12 +198,23 @@ let hyruleRepository = (function () {
     }
   })
 
+  // Filter everything and show only the one
+  function categoryFilter(entry) {
+    let categoryAll = hyruleCompendium;
+    let categoryCreature = Object.keys(hyruleCompendium)
+    
+
+    console.log(categoryAll)
+    console.log(categoryCreature)
+  }
+
   return {
     getAll: getAll,
     add: add,
     loadList: loadList,
     addListItem: addListItem,
     showDetails: showDetails,
+    categoryFilter: categoryFilter,
   };
 })();
 
@@ -208,3 +224,5 @@ hyruleRepository.loadList().then(function () {
     hyruleRepository.addListItem(entry);
   });
 });
+
+console.log(hyruleRepository.categoryFilter())
