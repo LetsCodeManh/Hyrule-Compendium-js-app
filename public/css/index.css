@@ -244,10 +244,11 @@ main .categories-container .categories:hover svg path, main .categories-containe
   text-align: center;
   vertical-align: middle;
   overflow-y: auto;
+  padding-inline: 1rem;
 }
 .modal-container .modal-background .modal {
   background-image: url(/public/images/background/Background-Texture-Dark.png);
-  margin: 5rem 2rem;
+  margin: 0 auto;
   padding: 2rem;
   border-image-slice: 40 40 40 40;
   border-image-outset: 9px 8px 10px 8px;
@@ -261,6 +262,7 @@ main .categories-container .categories:hover svg path, main .categories-containe
   line-height: 1.5;
   display: grid;
   gap: 1.5rem;
+  max-width: 900px;
 }
 .modal-container .modal-background .modal h3 {
   font-weight: 500;
@@ -283,6 +285,11 @@ main .categories-container .categories:hover svg path, main .categories-containe
           align-items: center;
   gap: 0.5rem;
 }
+.modal-container .modal-background .modal .modal-header .modal-content-category, .modal-container .modal-background .modal .modal-text .modal-content-category {
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  letter-spacing: 2px;
+}
 .modal-container .modal-background .modal .modal-text .modal-text-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -295,7 +302,7 @@ main .categories-container .categories:hover svg path, main .categories-containe
           align-items: center;
   gap: 1rem;
   height: 100%;
-  width: 60vw;
+  width: 60%;
 }
 .modal-container .modal-background .modal .modal-text .modal-text-container .left {
   background-image: url(/public/images/text-decoration/Left-side.svg);
@@ -313,6 +320,7 @@ main .categories-container .categories:hover svg path, main .categories-containe
 }
 .modal-container .modal-background .modal .modal-text .modal-text-container p {
   padding-inline: 2rem;
+  font-size: 0.875rem;
 }
 .modal-container.is-active {
   z-index: 0;

@@ -59,11 +59,6 @@ let hyruleRepository = (function () {
       });
   }
 
-  // Adding is-active to modal container
-  // function showDetails(entry) {
-
-  // }
-
   // Create elements to display the objects
   function addListItem(entry) {
     let compendiumList = document.querySelector(".list-container");
@@ -83,6 +78,7 @@ let hyruleRepository = (function () {
     let imagesApi = document.createElement("img");
     imagesApi.classList.add("default-loading-images");
     imagesApi.setAttribute("src", entry.image);
+    imagesApi.setAttribute("alt", "An image of " + entry.name);
     imageContainer.appendChild(imagesApi);
 
     function idCount(number) {
@@ -112,18 +108,97 @@ let hyruleRepository = (function () {
     //Join all the elements of the array back into a string
     //using a blankspace as a separator
     const entryNameCapitalized = arr.join(" ");
-
     let nameApi = document.createElement("p");
     nameApi.classList.add("object-name");
     nameApi.innerText = entryNameCapitalized;
     listItem.appendChild(nameApi);
+
+    // Add click Events
+    listItem.addEventListener("click", (e) => {
+      showDetails(entry);
+    });
   }
+
+  // Show Details Modal
+  function showDetails(entry) {
+    let modalContainer = document.querySelector(".modal-container");
+    modalContainer.classList.add("is-active");
+
+    function idCount(number) {
+      return (number < 10 ? "00" : number < 100 ? "0" : "") + number;
+    }
+    // Create a paragraph for the name of the object
+    const entryName = entry.name;
+
+    //split the above string into an array of strings
+    //whenever a blank space is encountered
+    const arr = entryName.split(" ");
+
+    //loop through each element of the array and capitalize the first letter.
+    for (var i = 0; i < arr.length; i++) {
+      arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
+    }
+
+    //Join all the elements of the array back into a string
+    //using a blankspace as a separator
+    const entryNameCapitalized = arr.join(" ");
+    let modalContentHeader = document.querySelector(".modal-content-header");
+    modalContentHeader.innerText = idCount(entry.id) + " " + entryNameCapitalized;
+
+    let modalContentCategory = document.querySelector(
+      ".modal-content-category"
+    );
+    modalContentCategory.innerText = entry.category;
+
+    let modalContentImage = document.querySelector(".modal-content-image");
+    modalContentImage.setAttribute("src", entry.image);
+    modalContentImage.setAttribute("alt", "An image of " + entry.name);
+
+    let modalContentDescription = document.querySelector(
+      ".modal-content-description"
+    );
+    modalContentDescription.innerText = entry.description;
+
+    let modalContentLocation = document.querySelector(
+      ".modal-content-location"
+    );
+    let locations = "";
+    if (entry.common_locations === null) {
+      locations = "Unknown";
+    } else {
+      locations = entry.common_locations.join(", ");
+    }
+    modalContentLocation.innerText = locations;
+  }
+
+  function hideDetails() {
+    let modalContainer = document.querySelector(".modal-container");
+    modalContainer.classList.remove("is-active");
+  }
+
+  // When the user presses the ESC key
+  window.addEventListener("keydown", (e) => {
+    let modalContainer = document.querySelector(".modal-container");
+    if (e.key === "Escape" && modalContainer.classList.contains("is-active")) {
+      hideDetails();
+    }
+  })
+
+  // When the user clicks outside of the modal
+  window.addEventListener("click", (e) => {
+    let modalBackground = document.querySelector(".modal-background");
+    let target = e.target;
+    if (target === modalBackground) {
+      hideDetails();
+    }
+  })
 
   return {
     getAll: getAll,
     add: add,
     loadList: loadList,
     addListItem: addListItem,
+    showDetails: showDetails,
   };
 })();
 
