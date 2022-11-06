@@ -101,11 +101,13 @@ main {
       .categories-name {
         font-size: 1.25rem;
         font-weight: 400;
+        pointer-events: none;
       }
 
       svg {
         fill: $color-primary;
         transition: fill 500ms ease-in-out;
+        pointer-events: none;
 
         path {
           filter: drop-shadow(0px 0px 5px #005b9d);

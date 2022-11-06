@@ -144,7 +144,8 @@ let hyruleRepository = (function () {
     const entryNameCapitalized = arr.join(" ");
     // Adding the API ID + Name in modalContentHeader
     let modalContentHeader = document.querySelector(".modal-content-header");
-    modalContentHeader.innerText = idCount(entry.id) + " " + entryNameCapitalized;
+    modalContentHeader.innerText =
+      idCount(entry.id) + " " + entryNameCapitalized;
 
     let modalContentCategory = document.querySelector(
       ".modal-content-category"
@@ -187,7 +188,7 @@ let hyruleRepository = (function () {
     if (e.key === "Escape" && modalContainer.classList.contains("is-active")) {
       hideDetails();
     }
-  })
+  });
 
   // When the user clicks outside of the modal
   window.addEventListener("click", (e) => {
@@ -196,17 +197,24 @@ let hyruleRepository = (function () {
     if (target === modalBackground) {
       hideDetails();
     }
-  })
+  });
+
+  // window.addEventListener("click", (e) => {
+  //   let categoriesContainer = document.querySelector(".categories");
+  //   let target = e.target;
+  //   console.log(target);
+  //   if (target === categoriesContainer) {
+  //     categoriesIsActive();
+  //   }
+  // });
 
   // Filter everything and show only the one
-  function categoryFilter(entry) {
-    let categoryAll = hyruleCompendium;
-    let categoryCreature = Object.keys(hyruleCompendium)
-    
-
-    console.log(categoryAll)
-    console.log(categoryCreature)
-  }
+  // function categoryFilter(category) {
+  //   let categoriesContainer = document.querySelector(".categories");
+  //   categoriesContainer.addEventListener("click", () => {
+  //     categoriesContainer.classList.toggle("is-active");
+  //   });
+  // }
 
   return {
     getAll: getAll,
@@ -214,7 +222,8 @@ let hyruleRepository = (function () {
     loadList: loadList,
     addListItem: addListItem,
     showDetails: showDetails,
-    categoryFilter: categoryFilter,
+    // categoriesIsActive: categoriesIsActive,
+    // categoryFilter: categoryFilter,
   };
 })();
 
@@ -225,4 +234,18 @@ hyruleRepository.loadList().then(function () {
   });
 });
 
-console.log(hyruleRepository.categoryFilter())
+// Get the category container
+let categoryContainer = document.getElementsByClassName("categories");
+for (let i = 0; i < categoryContainer.length; i++) {
+  categoryContainer[i].onclick = function () {
+    var el = categoryContainer[0];
+    while (el) {
+      if (el.tagName === "categories is-active") {
+        el.classList.remove("is-active");
+      }
+      el = el.nextSibling;
+    }
+
+    this.classList.add("is-active");
+  };
+}

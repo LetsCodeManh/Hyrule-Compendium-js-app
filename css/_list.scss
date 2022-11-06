@@ -9,7 +9,7 @@
     align-items: center;
     list-style: none;
     padding-inline: 1rem;
-    gap: 2rem;
+    gap: 2vh 2rem;
     text-shadow: 0 0 5px #005b9d;
 
 
@@ -25,6 +25,8 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      justify-content: center;
+      text-align: center;
       gap: 1.25rem;
       transition: all 500ms ease-in-out;
       cursor: pointer;
@@ -63,6 +65,9 @@
 
       .object-name {
         font-size: clamp(0.875rem, 2vw, 1.25rem);
+        width: 160px;
+        height: 50px;
+        line-height: 1.4;
       }
 
       &:hover,
