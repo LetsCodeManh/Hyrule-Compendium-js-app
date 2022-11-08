@@ -111,7 +111,12 @@ let hyruleRepository = (function () {
     let nameApi = document.createElement("p");
     nameApi.classList.add("object-name");
     nameApi.innerText = entryNameCapitalized;
-    listItem.appendChild(nameApi);
+
+    let divNameApi = document.createElement("div");
+    divNameApi.classList.add("center-object-name")
+    divNameApi.appendChild(nameApi)
+
+    listItem.appendChild(divNameApi);
 
     // Add click Events
     listItem.addEventListener("click", (e) => {

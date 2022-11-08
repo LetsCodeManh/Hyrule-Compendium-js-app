@@ -7,6 +7,7 @@
     align-items: center;
     list-style: none;
     padding-inline: 1rem;
+    padding-bottom: 10vh;
     gap: 2vh 2rem;
     text-shadow: 0 0 5px #005b9d;
 
@@ -64,16 +65,15 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        width: 150px;
+        height: 50px;
 
         .object-name {
           font-size: clamp(0.875rem, 2vw, 1.25rem);
-          // width: 160px;
-          // height: 50px;
+
           line-height: 1.4;
         }
       }
-
-      
 
       &:hover,
       &:focus {

@@ -59,6 +59,10 @@
           font-size: 1.4rem;
           letter-spacing: 2px;
         }
+
+        .modal-content-header {
+          padding-bottom: 1rem;
+        }
       }
 
       .modal-text {
@@ -70,7 +74,7 @@
           align-items: center;
           gap: 1rem;
           height: 100%;
-          width: 60%;
+          width: 80%;
 
           .left {
             @extend %background-image;
