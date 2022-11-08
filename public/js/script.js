@@ -317,19 +317,3 @@ hyruleRepository.loadList().then(function () {
     hyruleRepository.addListItem(entry);
   });
 });
-
-// Get the category container
-// let categoryContainer = document.getElementsByClassName("categories");
-// for (let i = 0; i < categoryContainer.length; i++) {
-//   categoryContainer[i].onclick = function () {
-//     var el = categoryContainer[0];
-//     while (el) {
-//       if (el.tagName === "categories is-active") {
-//         el.classList.remove("is-active");
-//       }
-//       el = el.nextSibling;
-//     }
-
-//     this.classList.add("is-active");
-//   };
-// }
