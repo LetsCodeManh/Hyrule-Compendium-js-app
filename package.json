@@ -1,0 +1,22 @@
+{
+  "name": "hyrule-compendium-js-app",
+  "version": "1.0.0",
+  "description": "## Hyrule Compendium App",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint ./public/js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LetsCodeManh/Hyrule-Compendium-js-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LetsCodeManh/Hyrule-Compendium-js-app/issues"
+  },
+  "homepage": "https://github.com/LetsCodeManh/Hyrule-Compendium-js-app#readme",
+  "devDependencies": {
+    "eslint": "^8.27.0"
+  }
+}

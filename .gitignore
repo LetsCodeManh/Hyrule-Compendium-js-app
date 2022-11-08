@@ -39,3 +39,4 @@ Thumbs.db
 # Ignore Mac System Files
 .DS_Store
 scss/
+node_modules/
