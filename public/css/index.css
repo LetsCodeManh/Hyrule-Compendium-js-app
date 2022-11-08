@@ -25,7 +25,7 @@ html {
 header {
   min-height: 100vh;
   width: 100vw;
-  background-image: url(./images/background/Sheikah-Frame-Art.png);
+  background-image: url(./../images/background/Sheikah-Frame-Art.png);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -49,7 +49,7 @@ header h1 {
 main {
   min-height: 100vh;
   width: 100vw;
-  background-image: url(./images/background/Background-Texture-Dark.png);
+  background-image: url(./../images/background/Background-Texture-Dark.png);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -200,7 +200,7 @@ main .categories-container .categories:hover svg path, main .categories-containe
   display: block;
   height: 160px;
   aspect-ratio: 1/1;
-  background-image: url(./images/list-background/default-list-background.png);
+  background-image: url(./../images/list-background/default-list-background.png);
   border: none;
 }
 .object-list-container .list-container .list-item .img-container .number {
@@ -215,7 +215,7 @@ main .categories-container .categories:hover svg path, main .categories-containe
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  background-image: url(./images/list-background/object-border.png);
+  background-image: url(./../images/list-background/object-border.png);
   height: 172px;
   -webkit-transition: all 500ms ease-in-out;
   transition: all 500ms ease-in-out;
@@ -231,7 +231,7 @@ main .categories-container .categories:hover svg path, main .categories-containe
   text-shadow: 0px 1px 11px #0a8dd7, 0px 0px 10px #4fc0ff;
 }
 .object-list-container .list-container .list-item:hover .object-border, .object-list-container .list-container .list-item:focus .object-border {
-  background-image: url(./images/list-background/object-border-hover.png);
+  background-image: url(./../images/list-background/object-border-hover.png);
   height: 200px;
 }
 
@@ -256,15 +256,15 @@ main .categories-container .categories:hover svg path, main .categories-containe
   padding-inline: 1rem;
 }
 .modal-container .modal-background .modal {
-  background-image: url(/public/images/background/Background-Texture-Dark.png);
+  background-image: url(./../images/background/Background-Texture-Dark.png);
   margin: 0 auto;
   padding: 2rem;
   border-image-slice: 40 40 40 40;
   border-image-outset: 9px 8px 10px 8px;
   border-image-width: 20px 20px 20px 20px;
   border-style: solid;
-  border-image-source: url(/public/images/list-background/object-border-hover.png);
-  color: #3CD3FC;
+  border-image-source: url(./../images/list-background/object-border-hover.png);
+  color: #3cd3fc;
   text-shadow: 0px 0px 8px #4fc0ff;
   font-weight: 400;
   font-size: 1.125rem;
@@ -314,14 +314,14 @@ main .categories-container .categories:hover svg path, main .categories-containe
   width: 60%;
 }
 .modal-container .modal-background .modal .modal-text .modal-text-container .left {
-  background-image: url(./images/text-decoration/Left-side.svg);
+  background-image: url(./../images/text-decoration/Left-side.svg);
   background-position: left;
   background-size: contain;
   height: 100%;
   width: 100%;
 }
 .modal-container .modal-background .modal .modal-text .modal-text-container .right {
-  background-image: url(./images/text-decoration/Right-side.svg);
+  background-image: url(./../images/text-decoration/Right-side.svg);
   background-position: right;
   background-size: contain;
   height: 100%;
@@ -364,7 +364,4 @@ main .categories-container .categories:hover svg path, main .categories-containe
     -webkit-transform: scale(1);
             transform: scale(1);
   }
-}
-.container {
-  height: 100vh;
 }

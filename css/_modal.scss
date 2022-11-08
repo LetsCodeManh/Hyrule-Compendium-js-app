@@ -19,7 +19,7 @@
     padding-inline: 1rem;
 
     .modal {
-      background-image: url(/public/images/background/Background-Texture-Dark.png);
+      background-image: url(./../images/background/Background-Texture-Dark.png);
       @extend %background-image;
       margin: 0 auto;
       padding: 2rem;
@@ -28,7 +28,7 @@
       border-image-outset: 9px 8px 10px 8px;
       border-image-width: 20px 20px 20px 20px;
       border-style: solid;
-      border-image-source: url(/public/images/list-background/object-border-hover.png);
+      border-image-source: url(./../images/list-background/object-border-hover.png);
 
       color: $color-tertiary;
       text-shadow: 0px 0px 8px #4fc0ff;
@@ -74,7 +74,7 @@
 
           .left {
             @extend %background-image;
-            background-image: url(./images/text-decoration/Left-side.svg);
+            background-image: url(./../images/text-decoration/Left-side.svg);
             background-position: left;
             background-size: contain;
             height: 100%;
@@ -83,7 +83,7 @@
 
           .right {
             @extend %background-image;
-            background-image: url(./images/text-decoration/Right-side.svg);
+            background-image: url(./../images/text-decoration/Right-side.svg);
             background-position: right;
             background-size: contain;
             height: 100%;

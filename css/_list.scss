@@ -1,6 +1,4 @@
 .object-list-container {
-  // position: relative;
-
   .list-container {
     display: flex;
     flex-wrap: wrap;
@@ -11,7 +9,6 @@
     padding-inline: 1rem;
     gap: 2vh 2rem;
     text-shadow: 0 0 5px #005b9d;
-
 
     @media only screen and (min-height: 700px) {
       padding-inline: 3rem;
@@ -39,7 +36,7 @@
           display: block;
           height: 160px;
           aspect-ratio: 1 / 1;
-          background-image: url(./images/list-background/default-list-background.png);
+          background-image: url(./../images/list-background/default-list-background.png);
           @extend %background-image;
           border: none;
         }
@@ -57,7 +54,7 @@
           top: 50%;
           transform: translate(-50%, -50%);
           @extend .default-loading-images;
-          background-image: url(./images/list-background/object-border.png);
+          background-image: url(./../images/list-background/object-border.png);
           height: 172px;
           transition: all 500ms ease-in-out;
         }
@@ -76,7 +73,7 @@
         text-shadow: 0px 1px 11px #0a8dd7, 0px 0px 10px #4fc0ff;
 
         .object-border {
-          background-image: url(./images/list-background/object-border-hover.png);
+          background-image: url(./../images/list-background/object-border-hover.png);
           height: 200px;
         }
       }
