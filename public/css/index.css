@@ -73,7 +73,7 @@ main .categories-container {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: 12vh;
+  padding-top: 12vh;
   margin-inline: 2rem;
   -webkit-transform: scale(0.75);
           transform: scale(0.75);
@@ -165,7 +165,7 @@ main .categories-container .categories:hover svg path, main .categories-containe
           align-items: center;
   list-style: none;
   padding-inline: 1rem;
-  padding-bottom: 10vh;
+  padding-bottom: 12vh;
   gap: 2vh 2rem;
   text-shadow: 0 0 5px #005b9d;
 }
@@ -390,7 +390,8 @@ main .categories-container .categories:hover svg path, main .categories-containe
 }
 .search-bar {
   position: relative;
-  margin-top: -2rem;
+  margin-top: -1rem;
+  padding-bottom: 1rem;
 }
 .search-bar .search {
   background: transparent;

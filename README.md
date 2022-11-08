@@ -14,8 +14,6 @@ This app contains all Creatures, Equipment, Materials, Monsters, and Treasure fr
 * Build an App using Bootstrap
 * Introduction to jQuery
 
-
-
 ## Build with
 
 * HTML, CSS, and JavaScript
@@ -24,3 +22,4 @@ This app contains all Creatures, Equipment, Materials, Monsters, and Treasure fr
 
 
 ## Live Demo
+https://letscodemanh.github.io/Hyrule-Compendium-js-app/
