@@ -74,7 +74,7 @@
 
           .left {
             @extend %background-image;
-            background-image: url(/public/images/text-decoration/Left-side.svg);
+            background-image: url(./images/text-decoration/Left-side.svg);
             background-position: left;
             background-size: contain;
             height: 100%;
@@ -83,7 +83,7 @@
 
           .right {
             @extend %background-image;
-            background-image: url(/public/images/text-decoration/Right-side.svg);
+            background-image: url(./images/text-decoration/Right-side.svg);
             background-position: right;
             background-size: contain;
             height: 100%;
