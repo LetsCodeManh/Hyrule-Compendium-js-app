@@ -204,22 +204,44 @@ let hyruleRepository = (function () {
     }
   });
 
-  // window.addEventListener("click", (e) => {
-  //   let categoriesContainer = document.querySelector(".categories");
-  //   let target = e.target;
-  //   console.log(target);
-  //   if (target === categoriesContainer) {
-  //     categoriesIsActive();
-  //   }
-  // });
+  // Filter by Category
+  let categoryContainer = document.querySelector(".categories-container");
 
-  // Filter everything and show only the one
-  // function categoryFilter(category) {
-  //   let categoriesContainer = document.querySelector(".categories");
-  //   categoriesContainer.addEventListener("click", () => {
-  //     categoriesContainer.classList.toggle("is-active");
-  //   });
-  // }
+  categoryContainer.addEventListener("click", (category) => {
+    // Get the value by clicking on the category container
+    let categoryValue = category.target.id;
+
+    // Check if value matches - not matches means hidden
+    let categoryHidden = hyruleCompendium.filter(function (object) {
+      if (object.category !== categoryValue) {
+        return object;
+      }
+    });
+
+    // Check if value matches - matches means show
+    let categoryVisible = hyruleCompendium.filter(function (object) {
+      if (object.category === categoryValue) {
+        return object;
+      }
+    });
+
+    // Push the visible object to the hyruleCompendium list
+    categoryVisible.push(
+      ...hyruleCompendium.filter(function (object) {
+        return object.id.toString().includes(categoryValue);
+      })
+    );
+
+    // Add the hidden class for the hidden object
+    categoryHidden.map((object) => {
+      document.getElementById(object.id).classList.add("hidden");
+    });
+
+    // Remove the hidden class for the visible object
+    categoryVisible.map((object) => {
+      document.getElementById(object.id).classList.remove("hidden");
+    });
+  });
 
   // Search by name and ID
   let value = document.getElementById("search-for-name-id");
@@ -230,7 +252,7 @@ let hyruleRepository = (function () {
     // Get the value from the input field
     let typeValue = e.target.value.toLowerCase();
 
-    // Filter object to hide
+    // Filter object to hide - if they don't have the same value
     let objectHidden = hyruleCompendium.filter(function (object) {
       if (
         !object.name.toLowerCase().includes(typeValue) ||
@@ -240,7 +262,7 @@ let hyruleRepository = (function () {
       }
     });
 
-    // Filter object to show
+    // Filter object to show - if they have the same value
     let objectVisible = hyruleCompendium.filter(function (object) {
       if (
         object.name.toLowerCase().includes(typeValue) ||
@@ -299,17 +321,17 @@ hyruleRepository.loadList().then(function () {
 });
 
 // Get the category container
-let categoryContainer = document.getElementsByClassName("categories");
-for (let i = 0; i < categoryContainer.length; i++) {
-  categoryContainer[i].onclick = function () {
-    var el = categoryContainer[0];
-    while (el) {
-      if (el.tagName === "categories is-active") {
-        el.classList.remove("is-active");
-      }
-      el = el.nextSibling;
-    }
+// let categoryContainer = document.getElementsByClassName("categories");
+// for (let i = 0; i < categoryContainer.length; i++) {
+//   categoryContainer[i].onclick = function () {
+//     var el = categoryContainer[0];
+//     while (el) {
+//       if (el.tagName === "categories is-active") {
+//         el.classList.remove("is-active");
+//       }
+//       el = el.nextSibling;
+//     }
 
-    this.classList.add("is-active");
-  };
-}
+//     this.classList.add("is-active");
+//   };
+// }
