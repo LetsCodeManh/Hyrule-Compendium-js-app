@@ -308,8 +308,6 @@ let hyruleRepository = (function () {
     loadList: loadList,
     addListItem: addListItem,
     showDetails: showDetails,
-    // categoriesIsActive: categoriesIsActive,
-    // categoryFilter: categoryFilter,
   };
 })();
 

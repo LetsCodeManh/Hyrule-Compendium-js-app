@@ -8,7 +8,7 @@
           box-sizing: border-box;
 }
 
-.modal-container .modal-background .modal .modal-text .modal-text-container .right, .modal-container .modal-background .modal .modal-text .modal-text-container .left, .modal-container .modal-background .modal, .object-list-container .list-container .list-item .img-container .default-loading-images, .object-list-container .list-container .list-item .img-container .object-border, main, header {
+.modal-container .modal-background .modal .modal-text .modal-text-container .right, .modal-container .modal-background .modal .modal-text .modal-text-container .left, .modal-container .modal-background .modal, .object-list-container .list-container .list-item .img-container .default-loading-images, .object-list-container .list-container .list-item .img-container .object-border, main .background-image-fixed, header {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -47,9 +47,6 @@ header h1 {
 }
 
 main {
-  min-height: 100vh;
-  width: 100vw;
-  background-image: url(./../images/background/Background-Texture-Dark.png);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -61,6 +58,13 @@ main {
       -ms-flex-align: center;
           align-items: center;
   gap: 2rem;
+}
+main .background-image-fixed {
+  position: fixed;
+  min-height: 100vh;
+  width: 100vw;
+  background-image: url(./../images/background/Background-Texture-Dark.png);
+  z-index: -1;
 }
 main .categories-container {
   display: -webkit-box;
