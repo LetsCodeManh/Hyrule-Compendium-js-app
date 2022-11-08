@@ -166,7 +166,7 @@ main .categories-container .categories:hover svg path, main .categories-containe
   list-style: none;
   padding-inline: 1rem;
   padding-bottom: 12vh;
-  gap: 2vh 2rem;
+  gap: 2rem;
   text-shadow: 0 0 5px #005b9d;
 }
 @media only screen and (min-height: 700px) {
@@ -243,7 +243,7 @@ main .categories-container .categories:hover svg path, main .categories-containe
   height: 50px;
 }
 .object-list-container .list-container .list-item .center-object-name .object-name {
-  font-size: clamp(0.875rem, 2vw, 1.25rem);
+  font-size: clamp(1rem, 3vh, 1.25rem);
   line-height: 1.4;
 }
 .object-list-container .list-container .list-item:hover, .object-list-container .list-container .list-item:focus {
@@ -439,7 +439,7 @@ main .categories-container .categories:hover svg path, main .categories-containe
 .search-bar .reset-icon {
   position: absolute;
   right: 0;
-  bottom: 25%;
+  bottom: 60%;
   font-size: 1rem;
   -webkit-transform: translate(-50%, 0%);
           transform: translate(-50%, 0%);

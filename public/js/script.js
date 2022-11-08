@@ -241,6 +241,16 @@ let hyruleRepository = (function () {
     categoryVisible.map((object) => {
       document.getElementById(object.id).classList.remove("hidden");
     });
+
+    let categories = categoryContainer.getElementsByClassName("categories");
+    for (let i = 0; i < categories.length; i++) {
+      categories[i].addEventListener("click", function () {
+        document.querySelector(".is-active")
+          ? document.querySelector(".is-active").classList.remove("is-active")
+          : "";
+        this.classList.add("is-active");
+      });
+    }
   });
 
   // Search by name and ID
