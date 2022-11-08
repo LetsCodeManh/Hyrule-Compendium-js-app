@@ -141,6 +141,10 @@ main .categories-container .categories:hover svg path, main .categories-containe
           filter: drop-shadow(0px 1px 11px #0a8dd7, 0px 0px 10px #4fc0ff);
 }
 
+.hidden {
+  display: none !important;
+}
+
 .object-list-container .list-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -390,6 +394,7 @@ main .categories-container .categories:hover svg path, main .categories-containe
   outline: none;
   position: relative;
   padding: 0 0 0.25rem 0.25rem;
+  width: 160px;
   border-bottom: 2px solid #1a6b96;
   -webkit-transition: all 500ms ease-in-out;
   transition: all 500ms ease-in-out;
@@ -429,7 +434,8 @@ main .categories-container .categories:hover svg path, main .categories-containe
 .search-bar .reset-icon {
   position: absolute;
   right: 0;
-  bottom: 35%;
+  bottom: 25%;
+  font-size: 1rem;
   -webkit-transform: translate(-50%, 0%);
           transform: translate(-50%, 0%);
   -webkit-transition: all 500ms ease-in-out;

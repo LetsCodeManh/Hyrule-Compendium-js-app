@@ -8,6 +8,7 @@
     outline: none;
     position: relative;
     padding: 0 0 .25rem .25rem;
+    width: 160px;
 
     border-bottom: 2px solid $color-primary;
     transition: all 500ms ease-in-out;
@@ -25,7 +26,8 @@
   .reset-icon {
     position: absolute;
     right: 0;
-    bottom: 35%;
+    bottom: 25%;
+    font-size: 1rem;
     transform: translate(-50%, 0%);
     transition: all 500ms ease-in-out;
     text-shadow: 0 0 5px #005b9d;

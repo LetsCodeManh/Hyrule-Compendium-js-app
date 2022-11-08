@@ -113,8 +113,8 @@ let hyruleRepository = (function () {
     nameApi.innerText = entryNameCapitalized;
 
     let divNameApi = document.createElement("div");
-    divNameApi.classList.add("center-object-name")
-    divNameApi.appendChild(nameApi)
+    divNameApi.classList.add("center-object-name");
+    divNameApi.appendChild(nameApi);
 
     listItem.appendChild(divNameApi);
 
@@ -220,6 +220,65 @@ let hyruleRepository = (function () {
   //     categoriesContainer.classList.toggle("is-active");
   //   });
   // }
+
+  // Search by name and ID
+  let value = document.getElementById("search-for-name-id");
+
+  let clearIcon = document.querySelector(".reset-icon");
+
+  value.addEventListener("keyup", function (e) {
+    // Get the value from the input field
+    let typeValue = e.target.value.toLowerCase();
+
+    // Filter object to hide
+    let objectHidden = hyruleCompendium.filter(function (object) {
+      if (
+        !object.name.toLowerCase().includes(typeValue) ||
+        !object.id.toString().includes(typeValue)
+      ) {
+        return object;
+      }
+    });
+
+    // Filter object to show
+    let objectVisible = hyruleCompendium.filter(function (object) {
+      if (
+        object.name.toLowerCase().includes(typeValue) ||
+        object.id.toString().includes(typeValue)
+      ) {
+        return object;
+      }
+    });
+
+    // Push the visible object
+    objectVisible.push(
+      ...hyruleCompendium.filter(function (object) {
+        return object.id.toString().includes(typeValue);
+      })
+    );
+
+    // Add the hidden class for the hidden object
+    objectHidden.map((object) => {
+      document.getElementById(object.id).classList.add("hidden");
+    });
+
+    // Remove the hidden class for the visible object
+    objectVisible.map((object) => {
+      document.getElementById(object.id).classList.remove("hidden");
+    });
+
+    //
+    if (value.value && clearIcon.style.visibility != "visible") {
+      clearIcon.style.visibility = "visible";
+    } else if (!value.value) {
+      clearIcon.style.visibility = "hidden";
+    }
+  });
+
+  clearIcon.addEventListener("click", () => {
+    value.value = "";
+    clearIcon.style.visibility = "hidden";
+  });
 
   return {
     getAll: getAll,

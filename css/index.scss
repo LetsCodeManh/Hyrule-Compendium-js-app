@@ -132,4 +132,8 @@ main {
   }
 }
 
+.hidden {
+  display: none !important;
+}
+
 @import "list", "modal", "filter";
