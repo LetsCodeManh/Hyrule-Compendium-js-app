@@ -220,10 +220,19 @@ main .categories-container .categories:hover svg path, main .categories-containe
   -webkit-transition: all 500ms ease-in-out;
   transition: all 500ms ease-in-out;
 }
-.object-list-container .list-container .list-item .object-name {
+.object-list-container .list-container .list-item .center-object-name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.object-list-container .list-container .list-item .center-object-name .object-name {
   font-size: clamp(0.875rem, 2vw, 1.25rem);
-  width: 160px;
-  height: 50px;
   line-height: 1.4;
 }
 .object-list-container .list-container .list-item:hover, .object-list-container .list-container .list-item:focus {
@@ -364,4 +373,82 @@ main .categories-container .categories:hover svg path, main .categories-containe
     -webkit-transform: scale(1);
             transform: scale(1);
   }
+}
+.search-bar {
+  position: relative;
+  margin-top: -2rem;
+}
+.search-bar .search {
+  background: transparent;
+  border: none;
+  outline: none;
+  position: relative;
+  padding: 0 0 0.25rem 0.25rem;
+  border-bottom: 2px solid #1a6b96;
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+  color: #1cffff;
+}
+.search-bar .search::-webkit-input-placeholder {
+  font-family: "Roboto", sans-serif;
+  color: #1a6b96;
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+}
+.search-bar .search::-moz-placeholder {
+  font-family: "Roboto", sans-serif;
+  color: #1a6b96;
+  -moz-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+}
+.search-bar .search:-ms-input-placeholder {
+  font-family: "Roboto", sans-serif;
+  color: #1a6b96;
+  -ms-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+}
+.search-bar .search::-ms-input-placeholder {
+  font-family: "Roboto", sans-serif;
+  color: #1a6b96;
+  -ms-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+}
+.search-bar .search::placeholder {
+  font-family: "Roboto", sans-serif;
+  color: #1a6b96;
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+}
+.search-bar .reset-icon {
+  position: absolute;
+  right: 0;
+  bottom: 35%;
+  -webkit-transform: translate(-50%, 0%);
+          transform: translate(-50%, 0%);
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+  text-shadow: 0 0 5px #005b9d;
+  visibility: hidden;
+}
+.search-bar:hover, .search-bar:focus {
+  color: #1cffff;
+  text-shadow: 0px 1px 11px #0a8dd7, 0px 0px 10px #4fc0ff;
+}
+.search-bar:hover .search, .search-bar:focus .search {
+  border-color: #1cffff;
+}
+.search-bar:hover .search::-webkit-input-placeholder, .search-bar:focus .search::-webkit-input-placeholder {
+  color: #1cffff;
+}
+.search-bar:hover .search::-moz-placeholder, .search-bar:focus .search::-moz-placeholder {
+  color: #1cffff;
+}
+.search-bar:hover .search:-ms-input-placeholder, .search-bar:focus .search:-ms-input-placeholder {
+  color: #1cffff;
+}
+.search-bar:hover .search::-ms-input-placeholder, .search-bar:focus .search::-ms-input-placeholder {
+  color: #1cffff;
+}
+.search-bar:hover .search::placeholder, .search-bar:focus .search::placeholder {
+  color: #1cffff;
 }

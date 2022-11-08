@@ -60,12 +60,20 @@
         }
       }
 
-      .object-name {
-        font-size: clamp(0.875rem, 2vw, 1.25rem);
-        width: 160px;
-        height: 50px;
-        line-height: 1.4;
+      .center-object-name {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .object-name {
+          font-size: clamp(0.875rem, 2vw, 1.25rem);
+          // width: 160px;
+          // height: 50px;
+          line-height: 1.4;
+        }
       }
+
+      
 
       &:hover,
       &:focus {
