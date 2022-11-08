@@ -26,6 +26,7 @@ This app contains all Creatures, Enemies, Materials, Weapons, and Treasure from 
 
 * Adding the annoying and beautiful sound effect would be nice on the background
 * Adding a different mouse tracking function would be nice
+* Loading screen would be nice
 
 
 ## Learning Lessons
