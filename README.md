@@ -4,9 +4,9 @@
 
 A small web application using HTML, CSS, and JavaScript that loads data from the [Hyrule Compendium API]
 
-This app contains all Creatures, Enemies, Materials, Weapons, and Treasure from the game Legenda of Zelda Breath of the Wild. And you also have the access to the details of each object.
+This app contains all Creatures, Enemies, Materials, Weapons, and Treasure from the game Legend of Zelda Breath of the Wild. And you also have the access to the details of each object.
 
-## How I did make it
+## How did I make it
 
 * At first I was searching for a matching design and layout
 * Luckily I found an open-source Figma file for this project
@@ -27,6 +27,7 @@ This app contains all Creatures, Enemies, Materials, Weapons, and Treasure from 
 * Adding the annoying and beautiful sound effect would be nice on the background
 * Adding a different mouse tracking function would be nice
 * Loading screen would be nice
+* Adding "Design by me" and GitHub Link
 
 
 ## Learning Lessons
