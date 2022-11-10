@@ -28,6 +28,7 @@ This app contains all Creatures, Enemies, Materials, Weapons, and Treasure from 
 * Adding a different mouse tracking function would be nice
 * Loading screen would be nice
 * Adding "Design by me" and GitHub Link
+* Horizontal Scroll like in the game with scrollbar like in the game
 
 
 ## Learning Lessons
